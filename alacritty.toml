@@ -5,13 +5,14 @@ import = [
 
 [window]
 title = "kuyangora"
+#decorations = "buttonless"
+decorations = "Full"
 
 opacity = 0.9
 
 padding.x = 10
 #padding.y = 5
 
-decorations = "Full"
 
 [selection]
 save_to_clipboard = true
