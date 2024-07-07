@@ -1,0 +1,27 @@
+# Use alacrity themes from https://github.com/alacritty/alacritty-theme
+import = [
+    "~/.config/alacritty/themes/themes/tokyo-night.toml"
+]
+
+[window]
+title = "kuyangora"
+
+opacity = 0.9
+
+padding.x = 10
+#padding.y = 5
+
+decorations = "Full"
+
+[selection]
+save_to_clipboard = true
+
+[font]
+#normal.family = "Source Code Pro"
+#bold.family = "Source Code Pro"
+#italic.family = "Source Code Pro"
+#bold_italic.family = "Source Code Pro"
+size = 14.0
+
+[shell]
+program = "tmux"
