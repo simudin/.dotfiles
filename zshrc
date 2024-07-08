@@ -122,7 +122,6 @@ gdbstacktrace() {
 }
 
 export PATH="$PATH:/usr/bin/docker"
-alias neofetch="neofetch --ascii ~/.dotfiles/pain.ascii"
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
