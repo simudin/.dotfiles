@@ -297,8 +297,8 @@ nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <Up> :resize -2<CR>
 nnoremap <Down> :resize +2<CR>
-nnoremap <Left> :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
+nnoremap <Left> :vertical resize -2<CR>
+nnoremap <Right> :vertical resize +2<CR>
 
 
 " grep.vim

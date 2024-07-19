@@ -20,8 +20,16 @@ vim.opt.rtp:prepend(lazypath)
 -- This is also a good place to setup other settings (vim.opt)
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
+
+-- Copy to clipboard, for linux dont forget to install xclip
 vim.opt.clipboard = "unnamedplus"
 vim.keymap.set('n','YY','"+y')
+
+-- Resize split
+vim.api.nvim_set_keymap('n', '<Up>', ':resize -2<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Down>', ':resize +2<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Left>', ':vertical resize -2<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Right>', ':vertical resize +2<CR>', { noremap = true, silent = true })
 
 -- Setup lazy.nvim
 require("lazy").setup({
