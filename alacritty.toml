@@ -16,11 +16,15 @@ padding.x = 10
 save_to_clipboard = true
 
 [font]
-#normal.family = "Source Code Pro"
-#bold.family = "Source Code Pro"
-#italic.family = "Source Code Pro"
-#bold_italic.family = "Source Code Pro"
+normal.family = "Hack Nerd Font Mono"
+normal.style = "Regular"
+bold.family = "Hack Nerd Font Mono"
+bold.style = "Bold"
+italic.family = "Hack Nerd Font Mono"
+italic.style = "Italic"
+bold_italic.family = "Hack Nerd Font Mono"
+bold_italic.style = "Bold Italic"
 size = 14.0
 
 [shell]
-program = "tmux"
+program = "/opt/homebrew/bin/tmux"
