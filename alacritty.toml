@@ -28,7 +28,7 @@ size = 14.0
 
 [shell]
 # for linux
-# program = "tmux"
+program = "tmux"
 
 # for macos
-program = "/opt/homebrew/bin/tmux"
+# program = "/opt/homebrew/bin/tmux"
