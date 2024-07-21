@@ -22,8 +22,9 @@ vim.g.mapleader = "\\"
 vim.g.maplocalleader = "\\"
 
 -- Copy to clipboard, for linux dont forget to install xclip
-vim.opt.clipboard = "unnamedplus"
-vim.keymap.set('n','YY','"+y')
+vim.opt.clipboard:append("unnamedplus")
+vim.api.nvim_set_keymap('v', '<Leader>y', '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>Y', '"+Y', { noremap = true, silent = true })
 
 -- Resize split
 vim.api.nvim_set_keymap('n', '<Up>', ':resize -2<CR>', { noremap = true, silent = true })
@@ -33,6 +34,9 @@ vim.api.nvim_set_keymap('n', '<Right>', ':vertical resize -2<CR>', { noremap = t
 
 -- set line number
 vim.wo.number = true
+
+-- Activate color theme
+vim.opt.termguicolors = true
 
 -- Setup lazy.nvim
 require("lazy").setup({
