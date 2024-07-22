@@ -11,5 +11,11 @@ return {
       -- See Configuration section for rest
     },
     -- See Commands section for default commands if you want to lazy load on them
+    build = function()
+      vim.notify("Please update the remote plugins by running ':UpdateRemotePlugins', then restart Neovim.")
+    end,
+    keys = {
+      { "<leader>cc", "<cmd>CopilotChat<cr>", desc = "CopilotChat - Chat with current buffer" },
+    },
   },
 }
