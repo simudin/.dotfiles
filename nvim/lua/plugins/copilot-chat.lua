@@ -15,7 +15,7 @@ return {
       vim.notify("Please update the remote plugins by running ':UpdateRemotePlugins', then restart Neovim.")
     end,
     keys = {
-      { "<leader>cc", "<cmd>CopilotChat<cr>", desc = "CopilotChat - Chat with current buffer" },
+      { "<leader>cc", "<cmd>CopilotChatToggle<cr>", desc = "CopilotChat - Chat with current buffer" },
     },
   },
 }
