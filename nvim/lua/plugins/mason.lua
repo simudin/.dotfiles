@@ -10,7 +10,7 @@ return {
 		config = function()
 			require("mason-lspconfig").setup()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "rust_analyzer", "tsserver" },
+				ensure_installed = { "lua_ls", "rust_analyzer", "tsserver", "clangd" },
 			})
 		end,
 	},
@@ -20,6 +20,7 @@ return {
 			require("lspconfig").lua_ls.setup({})
 			require("lspconfig").rust_analyzer.setup({})
 			require("lspconfig").tsserver.setup({})
+      require("lspconfig").clangd.setup({})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
