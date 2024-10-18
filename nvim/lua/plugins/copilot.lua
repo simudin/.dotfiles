@@ -4,7 +4,8 @@ return {
     cmd = "Copilot",
     event = "InsertEnter",
     config = function()
-      require("copilot").setup({
+      local filetype = vim.bo.filetype
+      local copilot_config = {
         suggestion = {
           enabled = true,
           auto_trigger = false,
@@ -19,7 +20,13 @@ return {
             dismiss = "<C-]>",
           },
         },
-      })
+      }
+
+      if filetype == "c" then
+        copilot_config.suggestion.enabled = false
+      end
+
+      require("copilot").setup(copilot_config)
       require("copilot.suggestion").toggle_auto_trigger()
     end,
   }
