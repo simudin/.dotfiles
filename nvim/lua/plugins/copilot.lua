@@ -4,7 +4,6 @@ return {
     cmd = "Copilot",
     event = "InsertEnter",
     config = function()
-      local filetype = vim.bo.filetype
       local copilot_config = {
         suggestion = {
           enabled = true,
@@ -20,11 +19,13 @@ return {
             dismiss = "<C-]>",
           },
         },
+        filetypes = {
+          javascript = true,
+          typescript = true,
+          ruby = true,
+          ["*"] = false,     -- disable for all other filetypes and ignore default `filetypes`
+        },
       }
-
-      if filetype == "c" then
-        copilot_config.suggestion.enabled = false
-      end
 
       require("copilot").setup(copilot_config)
       require("copilot.suggestion").toggle_auto_trigger()
