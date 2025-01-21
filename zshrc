@@ -121,6 +121,20 @@ gdbstacktrace() {
     gdb --batch --ex run --ex bt --ex q --args "$filename"
 }
 
+qgate() {
+  if [[ "$1" != "staging" && "$1" != "production" ]]; then
+    echo -e "\e[31m💥 Error: The argument must be either 'staging' or 'production'!\e[0m"
+    return 1
+  fi
+
+  if [[ "$1" == "production" ]]; then
+    echo -e "\e[31m🔥 Warning: You are about to connect to the Production Gate Server!\e[0m"
+  fi
+
+  instance_id=$(aws ec2 describe-instances --filters "Name=tag:Role,Values=ssm-gate" "Name=tag:Environment,Values=$1" --query "Reservations[*].Instances[*].InstanceId" --output text --max-items 1 --profile qs);
+  aws ssm start-session --target "$instance_id" --profile qs;
+}
+
 export PATH="$PATH:/usr/bin/docker"
 
 export NVM_DIR="$HOME/.nvm"
