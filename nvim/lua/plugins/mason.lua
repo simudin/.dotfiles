@@ -10,7 +10,7 @@ return {
 		config = function()
 			require("mason-lspconfig").setup()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "rust_analyzer", "ts_ls", "clangd", "gopls" },
+				ensure_installed = { "lua_ls", "rust_analyzer", "ts_ls", "clangd", "gopls", "golangci_lint_ls" },
 			})
 		end,
 	},
