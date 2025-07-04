@@ -1,5 +1,6 @@
 term = xterm-256color
-theme = tokyonight
+#theme = tokyonight
+theme = zenwritten_light
 
 font-family = "Hack Nerd Font"
 font-thicken = true
