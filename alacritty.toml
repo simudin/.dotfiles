@@ -1,7 +1,13 @@
 # Use alacrity themes from https://github.com/alacritty/alacritty-theme
 [general]
+# dark
+#import = [
+#    "~/.config/alacritty/themes/themes/tokyo-night.toml"
+#]
+
+#light
 import = [
-    "~/.config/alacritty/themes/themes/tokyo_night.toml"
+    "~/.config/alacritty/themes/themes/gruvbox_light.toml"
 ]
 
 [env]
@@ -12,7 +18,8 @@ enable_rgb = "true"
 title = "kuyangora"
 decorations = "Full"
 
-opacity = 0.9
+#opacity = 0.9
+opacity = 1
 
 padding.x = 10
 #padding.y = 5
