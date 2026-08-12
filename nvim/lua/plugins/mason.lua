@@ -10,7 +10,7 @@ return {
     config = function()
       require("mason-lspconfig").setup()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "rust_analyzer", "ts_ls", "clangd", "gopls", "golangci_lint_ls" },
+        ensure_installed = { "lua_ls", "rust_analyzer", "ts_ls", "clangd", "gopls", "golangci_lint_ls", "zls" },
       })
     end,
   },
@@ -23,6 +23,7 @@ return {
       vim.lsp.config("clangd", {})
       vim.lsp.config("gopls", {})
       vim.lsp.config("golangci_lint_ls", {})
+      vim.lsp.config("zls", {})
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
