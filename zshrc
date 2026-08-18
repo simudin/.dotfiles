@@ -158,3 +158,4 @@ export PATH=$PATH:/usr/local/go/bin
 [[ -f /home/rottentahu/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/rottentahu/.config/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+export PATH="$HOME/.local/bin:$PATH"
